@@ -22,6 +22,5 @@ export class MessageService {
       if(index === i) this.messages.splice(index,1);
     });
  }
-
  
 }
