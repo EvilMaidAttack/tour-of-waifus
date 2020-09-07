@@ -16,4 +16,12 @@ export class MessageService {
   clear(){
     this.messages = []
   }
+
+  update(index: number){
+    this.messages.forEach( (item, i) => {
+      if(index === i) this.messages.splice(index,1);
+    });
+ }
+
+ 
 }
