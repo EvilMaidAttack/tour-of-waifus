@@ -1,6 +1,6 @@
 /* Application-wide Styles */
 @import '~material-design-icons/iconfont/material-icons.css';
-@import "~@angular/cdk/overlay-prebuilt.css";
+@import '~ngx-toastr/toastr';
 
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
