@@ -16,13 +16,14 @@ export class MessageService {
 
   clear(){
     this.messages = []
+    this.toastrService.info('Messages cleared')
   }
 
   update(index: number){
     this.messages.forEach( (item, i) => {
       if(index === i) this.messages.splice(index,1);
     });
-    this.toastrService.success('hello')
+    
  }
  
 }
