@@ -1,11 +1,15 @@
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { WaifusComponent } from './waifus/waifus.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
 
+
 const routes: Routes = [
-  {path: 'waifus', component: WaifusComponent}
+  {path: 'waifus', component: WaifusComponent},
+  {path: 'dashboard', component: DashboardComponent},
+  {path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({

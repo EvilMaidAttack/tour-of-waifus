@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { WaifusComponent } from './waifus/waifus.component';
 import { WaifuDetailComponent } from './waifu-detail/waifu-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent,
     WaifusComponent,
     WaifuDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
