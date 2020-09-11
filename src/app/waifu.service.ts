@@ -18,6 +18,11 @@ export class WaifuService {
     return of(WAIFUS)
   }
 
+  getWaifu(id: number): Observable<Waifu> {
+    this.messageService.add(`WaifuService: fetched waifu id=${id}`);
+    return of(WAIFUS.find(waifu => waifu.id == id))
+  }
+
   
 
 }

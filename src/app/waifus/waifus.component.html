@@ -1,8 +1,11 @@
 <h2>My Heroes</h2>
 <ul class="waifus">
-    <li *ngFor="let waifu of waifus" (click)="onSelect(waifu)" [class.selected]="waifu === selectedWaifu">
-        <span class="badge">{{waifu.id}}</span> {{waifu.name}}
+    <li *ngFor="let waifu of waifus">
+        <a routerLink="/detail/{{waifu.id}}">
+            <span class="badge">{{waifu.id}}</span> {{waifu.name}}
+        </a>
     </li>
 </ul>
 
-<app-waifu-detail [waifu]="selectedWaifu"></app-waifu-detail>
+
+

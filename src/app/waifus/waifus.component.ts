@@ -1,4 +1,3 @@
-import { MessageService } from './../message.service';
 import { WaifuService } from './../waifu.service';
 import { Waifu } from './../waifu';
 import { Component, OnInit } from '@angular/core';
@@ -12,17 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class WaifusComponent implements OnInit {
 
   waifus: Waifu[]
-  selectedWaifu: Waifu
 
-  constructor(private waifuService: WaifuService, private messageService: MessageService) { }
+  constructor(private waifuService: WaifuService) { }
 
   ngOnInit(): void {
     this.getWaifus()
-  }
-
-  onSelect(waifu: Waifu): void {
-    this.selectedWaifu = waifu
-    this.messageService.add(`WaifuComponent: selected waifu id = ${waifu.id}`);
   }
 
   

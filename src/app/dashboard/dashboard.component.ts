@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getWaifus(): void {
-    this.waifuServuce.getWaifus().subscribe(waifus => this.waifus = waifus.slice(1,5))
+    this.waifuServuce.getWaifus().subscribe(waifus => this.waifus = waifus.slice(0,4))
   }
 
 }
