@@ -3,6 +3,7 @@ import { WAIFUS } from './mock-waifus';
 import { Waifu } from './waifu';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 
 
 
@@ -11,7 +12,9 @@ import { Observable, of } from 'rxjs';
 })
 export class WaifuService {
 
-  constructor(private messageService: MessageService) { }
+  private heroesUrl = 'api/waifus'
+
+  constructor(private messageService: MessageService, private http: HttpClient) { }
 
   getWaifus(): Observable<Waifu[]> {
     this.messageService.add("WaifuService: fetched waifus")
@@ -21,6 +24,10 @@ export class WaifuService {
   getWaifu(id: number): Observable<Waifu> {
     this.messageService.add(`WaifuService: fetched waifu id=${id}`);
     return of(WAIFUS.find(waifu => waifu.id == id))
+  }
+
+  private log(message: string): void {
+    this.messageService.add(`WaifuService: ${message}`)
   }
 
   
