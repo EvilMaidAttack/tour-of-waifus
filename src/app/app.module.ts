@@ -14,6 +14,7 @@ import { WaifusComponent } from './waifus/waifus.component';
 import { WaifuDetailComponent } from './waifu-detail/waifu-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { WaifuSearchComponent } from './waifu-search/waifu-search.component';
 
 
 
@@ -23,7 +24,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     WaifusComponent,
     WaifuDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    WaifuSearchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,20 @@
 <h2>My Heroes</h2>
+
+<div>
+  <label
+    >Waifu Name
+    <input #waifuName />
+  </label>
+  <button (click)="add(waifuName.value); waifuName.value = ''">add</button>
+</div>
+
 <ul class="waifus">
-    <li *ngFor="let waifu of waifus">
-        <a routerLink="/detail/{{waifu.id}}">
-            <span class="badge">{{waifu.id}}</span> {{waifu.name}}
-        </a>
-    </li>
+  <li *ngFor="let waifu of waifus">
+    <a routerLink="/detail/{{ waifu.id }}">
+      <span class="badge">{{ waifu.id }}</span> {{ waifu.name }}
+    </a>
+    <button class="delete" tite="delete waifu" (click)="delete(waifu)">
+      x
+    </button>
+  </li>
 </ul>
-
-
-

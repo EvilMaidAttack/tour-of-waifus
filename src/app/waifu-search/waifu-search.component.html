@@ -1,0 +1,11 @@
+<div class="searchBox">
+  <h4><label for="search-box">Waifu Search</label></h4>
+
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let waifu of waifus$ | async">
+      <a routerLink="/detail/{{ waifu.id }}"> {{ waifu.name }}</a>
+    </li>
+  </ul>
+</div>
